@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateHTML = ({ employee, id, email, officeNumber }) =>
+const generateHTML = ({ employee, id, email, officeNumber }) => 
 `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +15,9 @@ const generateHTML = ({ employee, id, email, officeNumber }) =>
         <div class="card-header"></div>
         <div class="card-body text-info">
           <h4 class="card-title">${employee}</h4>
+          
           <p class="card-text">ID: ${id}</p>
+          <p class="card-text">Email: ${email}</p>
           <p class="card-text">Office Number: ${officeNumber}</p>
         </div>
       </div>
@@ -27,12 +29,18 @@ inquirer
 .prompt([
     {
     // User selects if they are an Manager, Engineer, or Intern
-
+      type: 'option',
+      message: [
+        'Manager ',
+        'Engineer ',
+        'Intern '
+      ],
+      name: 'employee'
     },
     {
       type: 'input',
       message: 'What is their name?',
-      name: 'employee',
+      name: 'name',
     },
     {
       type: 'input',
@@ -42,8 +50,14 @@ inquirer
     {
         type: 'input',
         message: 'What is their ID?',
-        name: 'ID',
+        name: 'id',
     },
+    {
+        type: 'input',
+        message: 'What is the office number?',
+        name: 'officeNumber',
+    },
+
 
   ])
   .then((answers) => {
