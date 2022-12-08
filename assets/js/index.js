@@ -1,5 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const express = require('express');
+const app = express();
 const generateHTML = ({ employee, name, email, id, github }) => 
 `<!DOCTYPE html>
 <html lang="en">
@@ -91,3 +93,9 @@ inquirer
   );
   }
   );
+
+app.use(express.static(__dirname + 'css'));
+
+app.get('/', (request, response ) => {
+        response.sendFile(__dirname + '/index.html');
+    });
