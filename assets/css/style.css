@@ -1,0 +1,27 @@
+header {
+    height: 120px;
+    width: 100%;
+    background-color: rgb(250, 70, 70);
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    padding: 40px;
+}
+
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    height: 100vh;
+}
+
+.card-text {
+    border: none;
+    background-color: azure;
+    min-width: 170px;
+}
+

@@ -1,26 +1,38 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateHTML = ({ employee, id, email, officeNumber }) => 
+const generateHTML = ({ employee, name, email, id, github }) => 
 `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>README Generator</title>
 </head>
 <body>
-    <div class="card border-info mb-3" style="max-width: 18rem;">
-        <div class="card-header"></div>
+    <header>
+        <h1>My Team</h1>
+    </header>
+    <div id="card-container">
+      <div class="card border-info mb-3" style="max-width: 18rem;">
+        <div class="card-header">
+          <!-- The position of the employee (Manager, Engineer, Intern) -->
+          <h3 class="card-title">${employee}</h3>    
+        </div>
         <div class="card-body text-info">
-          <h4 class="card-title">${employee}</h4>
-          
+          <!-- Employee's name -->
+          <h4 class="card-text">${name}</h4>
           <p class="card-text">ID: ${id}</p>
           <p class="card-text">Email: ${email}</p>
-          <p class="card-text">Office Number: ${officeNumber}</p>
+          <p class="card-text">GitHub Username: ${github}</p>
         </div>
       </div>
+    </div>
 </body>
 </html>`
 
@@ -29,8 +41,9 @@ inquirer
 .prompt([
     {
     // User selects if they are an Manager, Engineer, or Intern
-      type: 'option',
-      message: [
+      type: 'list',
+      message: 'Which type of employee are you?',
+      choices: [
         'Manager ',
         'Engineer ',
         'Intern '
@@ -48,15 +61,26 @@ inquirer
       name: 'email',
     },
     {
-        type: 'input',
-        message: 'What is their ID?',
-        name: 'id',
+      type: 'input',
+      message: 'What is their ID?',
+      name: 'id',
     },
     {
-        type: 'input',
-        message: 'What is the office number?',
-        name: 'officeNumber',
+      type: 'input',
+      message: 'What is your GitHub username?',
+      name: 'github',
     },
+    {
+      type: 'choices',
+      message: 'Any other team members?',
+      choices: [
+        'Yes',
+        'No'
+      ],
+      name: 'members',
+
+    },
+    
 
 
   ])
