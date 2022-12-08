@@ -38,9 +38,8 @@ const generateHTML = ({ employee, name, email, id, github }) =>
 </body>
 </html>`
 
-inquirer
 // User prompt to create index.html
-.prompt([
+inquirer.prompt([
     {
     // User selects if they are an Manager, Engineer, or Intern
       type: 'list',
@@ -84,8 +83,8 @@ inquirer
     },
     
 
-
   ])
+
   .then((answers) => {
     const htmlPageContent = generateHTML(answers);
     fs.writeFile('index.html', htmlPageContent, (err) =>
@@ -94,8 +93,8 @@ inquirer
   }
   );
 
-app.use(express.static(__dirname + 'css'));
+app.use(express.static(__dirname + 'assets/css/style.css'));
 
-app.get('/', (request, response ) => {
-        response.sendFile(__dirname + '/index.html');
+app.get('/', (req , res) => {
+        res.sendFile(__dirname + '/index.html');
     });
