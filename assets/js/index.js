@@ -44,6 +44,7 @@ const generateHTML = ({ employee, name, email, id, github }) =>
 inquirer
   .prompt([
     {
+<<<<<<< HEAD
     // User selects if they are an Manager, Engineer, or Intern
       type: 'list',
       message: 'Which type of employee are you?',
@@ -51,6 +52,16 @@ inquirer
         'Manager ',
         'Engineer ',
         'Intern '
+=======
+    // User selects if they are an Engineer, or Intern
+    // Or selects finish building
+      type: 'list',
+      message: 'Which type of employee are you?',
+      choices: [
+        'Engineer ',
+        'Intern ',
+        'Finish building team'
+>>>>>>> 67a9e34 (Fixed origin repository. Created a new folder called lib(library) and files inside called Employee, Engineer, Manager, and Intern. Redid package.json using npm init -y.)
       ],
       name: 'employee'
     },
@@ -123,4 +134,25 @@ app.use(express.static(__dirname + 'assets/css/style.css'));
 
 app.get('/', (req , res) => {
         res.sendFile(__dirname + '/index.html');
+<<<<<<< HEAD
     });
+=======
+    });
+
+    .then((response) => {
+      const Engineer = new Engineer(
+        response.name,
+        response.school,
+
+      )
+    })
+    team.members.push(Engineer)
+
+    class Intern extends Eployee {
+      constructor(name, id, email, school) {
+        super(name, id, email)
+        this.gitHub = gitHub;
+        this.role = 'Intern';
+      }
+    }
+>>>>>>> 67a9e34 (Fixed origin repository. Created a new folder called lib(library) and files inside called Employee, Engineer, Manager, and Intern. Redid package.json using npm init -y.)

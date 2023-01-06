@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 node_modules
+=======
+node_modules
+.DS_Store
+>>>>>>> 67a9e34 (Fixed origin repository. Created a new folder called lib(library) and files inside called Employee, Engineer, Manager, and Intern. Redid package.json using npm init -y.)
