@@ -1,4 +1,4 @@
-// Creating functions that will push each new team member
+// Creating function for every new manager
 function makeManagerCard(manager) {
     return `
     <div class="card border-info mb-3" style="max-width: 18rem;">
@@ -7,7 +7,6 @@ function makeManagerCard(manager) {
           <h3 class="card-title">${manager.name}</h3>    
         </div>
         <div class="card-body text-info">
-          <!-- Employee's name -->
           <h4 class="card-text"></h4>
           <p class="card-text">ID: ${manager.id}</p>
           <p class="card-text">Email: ${manager.email}</p>
@@ -16,6 +15,8 @@ function makeManagerCard(manager) {
       </div>
     `
 };
+
+// Creating function for every new engineer
 function makeEngineerCard(engineer) {
     return `
     <div class="card border-info mb-3" style="max-width: 18rem;">
@@ -24,7 +25,6 @@ function makeEngineerCard(engineer) {
           <h3 class="card-title">${engineer.name}</h3>    
         </div>
         <div class="card-body text-info">
-          <!-- Employee's name -->
           <h4 class="card-text"></h4>
           <p class="card-text">ID: ${engineer.id}</p>
           <p class="card-text">Email: ${engineer.email}</p>
@@ -34,6 +34,7 @@ function makeEngineerCard(engineer) {
     `
 };
 
+// Creating function for every new intern
 function makeInternCard(intern) {
     return `
     <div class="card border-info mb-3" style="max-width: 18rem;">
@@ -42,7 +43,6 @@ function makeInternCard(intern) {
           <h3 class="card-title">${intern.name}</h3>    
         </div>
         <div class="card-body text-info">
-          <!-- Employee's name -->
           <h4 class="card-text"></h4>
           <p class="card-text">ID: ${intern.id}</p>
           <p class="card-text">Email: ${intern.email}</p>
@@ -55,18 +55,16 @@ function makeInternCard(intern) {
 function insertCard(team) {
     const cardArray = [];
     cardArray.push(team.filter(emp => emp.getRole === 'Manager').map(manager => makeManagerCard(manager)));
-    cardArray.push(team.filter(emp => emp.getRole === 'Engineer').map(engineer => makeEngineerCard(engineer)));
-    cardArray.push(team.filter(emp => emp.getRole === 'Intern').map(intern => makeInternCard(intern)));
+    // cardArray.push(team.filter(emp => emp.getRole === 'Engineer').map(engineer => makeEngineerCard(engineer)));
+    // cardArray.push(team.filter(emp => emp.getRole === 'Intern').map(intern => makeInternCard(intern)));
 
     return cardArray.join('');
 }
 
-// Calling the function that will push each new team member to the cardArray array
-insertCard();
 
 module.exports = function (team) {
     return `
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -88,7 +86,5 @@ module.exports = function (team) {
     </div>
 </body>
 </html>
-
     `
-
 };
