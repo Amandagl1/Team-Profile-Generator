@@ -3,10 +3,17 @@
 ## Description
 
 What was your motivation?
-Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-What problem does it solve?
-What did you learn?
-What makes your project stand out?
+- This project was created so that developers can cards for each of their team members.
+- This is a team profile generator that organizes a team. Each member has a different role(A manager, engineer(s), and/or intern(s)).
+- I built this generator because it makes it easier for to insert information into a single file.
+- I learned how to use node.js, npm install(Specific commands such as npm init -y to install the correct modules).
+  The command 
+  ```
+  npm init -y
+  ```
+  is also used to create a package.json
+
+
 
 ## Screenshot
 ![Screenshot of generated HTML](dist/images/screenshot-team-profile-generator.html.png)
