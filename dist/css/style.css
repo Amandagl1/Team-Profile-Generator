@@ -19,9 +19,14 @@ h1 {
     height: 100vh;
 }
 
+.card {
+    margin: 15px;
+}
+
 .card-text {
     border: none;
     background-color: azure;
     min-width: 170px;
+
 }
 

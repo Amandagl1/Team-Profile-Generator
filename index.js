@@ -1,4 +1,5 @@
 const inquirer = require('inquirer')
+// Requiring in files for each role
 const Manager = require('./lib/Manager')
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
@@ -113,7 +114,7 @@ function askIntern() {
             name: 'schoolName',
             message: "Enter the intern's school name."
         },
-        
+
     ]).then(answers => {
         console.log(answers);
         const intern = new Intern(answers.name, answers.id, answers.email, answers.schoolName);
