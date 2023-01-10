@@ -29,4 +29,4 @@ Once you run the test command in an intergrated terminal, you'll see this prompt
 ![Screenshot of generated HTML](dist/images/screenshot-team-profile-generator.html.png)
 
 ## Walkthrough
-![Video Walkthrough](https://drive.google.com/file/d/13dZiSVUEENgoHh99Hb8IEMCnsqOapcDU/view)
+[Video Walkthrough](https://drive.google.com/file/d/13dZiSVUEENgoHh99Hb8IEMCnsqOapcDU/view)
