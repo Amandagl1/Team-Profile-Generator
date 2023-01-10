@@ -13,6 +13,16 @@ What was your motivation?
   ```
   is also used to create a package.json
 
+## Tests
+
+To test the application, run this code in an intergrated terminal!
+```
+node index.js
+```
+
+## Usage
+Once you run the test command in an intergrated terminal, you'll see this prompt!
+![Usage of application](dist/images/usage.png)
 
 
 ## Screenshot
