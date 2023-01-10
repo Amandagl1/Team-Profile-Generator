@@ -54,9 +54,9 @@ function makeInternCard(intern) {
 
 function insertCard(team) {
     const cardArray = [];
-    cardArray.push(team.filter(emp => emp.getRole === 'Manager').map(manager => makeManagerCard(manager)));
-    // cardArray.push(team.filter(emp => emp.getRole === 'Engineer').map(engineer => makeEngineerCard(engineer)));
-    // cardArray.push(team.filter(emp => emp.getRole === 'Intern').map(intern => makeInternCard(intern)));
+    cardArray.push(team.filter(emp => emp.getRole() === 'Manager').map(manager => makeManagerCard(manager)));
+    cardArray.push(team.filter(emp => emp.getRole() === 'Engineer').map(engineer => makeEngineerCard(engineer)));
+    cardArray.push(team.filter(emp => emp.getRole() === 'Intern').map(intern => makeInternCard(intern)));
 
     return cardArray.join('');
 }

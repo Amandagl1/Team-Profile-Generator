@@ -26,11 +26,10 @@ function mainMenu() {
         } else if (answer.task === 'Intern') {
             askIntern();
         } else {
-            fs.writeFileSync(path.join(__dirname, '/dist/', 'team.html'), generateHTML(team))
+            fs.writeFileSync(path.join(__dirname, '/dist/', 'team.html'), generateHTML(team));
         }
-
     })
-}
+};
 
 function askManager() {
     inquirer.prompt([
@@ -60,29 +59,29 @@ function askManager() {
         team.push(manager);
         mainMenu();
     })
-}
+};
 
 function askEngineer() {
     inquirer.prompt([
         {
             type: 'input',
             name: 'name',
-            message: 'Enter the employee name.'
+            message: 'Enter the engineer name.'
         },
         {
             type: 'input',
             name: 'id',
-            message: 'Enter the employee id.'
+            message: 'Enter the engineer id.'
         },        
         {
             type: 'input',
             name: 'email',
-            message: 'Enter the employee email.'
+            message: 'Enter the engineer email.'
         },
         {
             type: 'input',
             name: 'githubUsername',
-            message: "Enter the employee's GitHub username."
+            message: "Enter the engineer's GitHub username."
         },
     ]).then(answers => {
         console.log(answers);
@@ -90,36 +89,38 @@ function askEngineer() {
         team.push(engineer);
         mainMenu();
     })
-}
+};
 
 function askIntern() {
     inquirer.prompt([
         {
             type: 'input',
             name: 'name',
-            message: 'Enter the employee name.'
+            message: 'Enter the intern name.'
         },
         {
             type: 'input',
             name: 'id',
-            message: 'Enter the employee id.'
-        },        
+            message: 'Enter the intern id.'
+        },      
         {
             type: 'input',
             name: 'email',
-            message: 'Enter the employee email.'
+            message: 'Enter the intern email.'
         },
         {
             type: 'input',
             name: 'schoolName',
-            message: "Enter the employee's school name."
+            message: "Enter the intern's school name."
         },
+        
     ]).then(answers => {
         console.log(answers);
         const intern = new Intern(answers.name, answers.id, answers.email, answers.schoolName);
         team.push(intern);
         mainMenu();
     })
-}
+};
+
 mainMenu();
 
