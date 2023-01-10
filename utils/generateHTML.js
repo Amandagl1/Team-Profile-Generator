@@ -28,7 +28,7 @@ function makeEngineerCard(engineer) {
           <h4 class="card-text"></h4>
           <p class="card-text">ID: ${engineer.id}</p>
           <p class="card-text">Email: ${engineer.email}</p>
-          <p class="card-text">Office Number: ${engineer.githubUsername}</p>
+          <p class="card-text">GitHub Username: ${engineer.githubUsername}</p>
         </div>
       </div>
     `
@@ -46,7 +46,7 @@ function makeInternCard(intern) {
           <h4 class="card-text"></h4>
           <p class="card-text">ID: ${intern.id}</p>
           <p class="card-text">Email: ${intern.email}</p>
-          <p class="card-text">Office Number: ${intern.schoolName}</p>
+          <p class="card-text">School Name: ${intern.schoolName}</p>
         </div>
       </div>
     `

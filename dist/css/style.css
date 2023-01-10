@@ -14,19 +14,24 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin: 50px;
     height: 100vh;
 }
 
 .card {
     margin: 15px;
+    width: 240px;
+    height: 260px;
+    box-shadow: 3px 3px 3px darkslategray;
+    border-radius: 2px;
 }
 
 .card-text {
     border: none;
     background-color: azure;
-    min-width: 170px;
+    max-width: 200px;
+    max-height: 260px;
 
 }
 
