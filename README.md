@@ -35,7 +35,7 @@ Once you run the test command in an intergrated terminal, you'll see this prompt
 <img src="dist/images/generatedHTML.png" alt="Screenshot of generated HTML" width="800px">
 
 ## Walkthrough
-[Video Walkthrough](https://drive.google.com/file/d/10qJ9pZtPmJBWpFdSVpwHAyd1Tmjz55kB/view)
+[Video Walkthrough](dist/images/Team-Profile-Generator-Walkthrough.webm)
 
 ## Contact
 
