@@ -27,15 +27,15 @@ npm start
 ```
 
 ## Usage
-Once you run the test command in an intergrated terminal, you'll see this prompt!
+Once you run the test command in an intergrated terminal, you'll see this prompt!  
 ![Usage of application](dist/images/usage.png)
 
 
-## Screenshot
-![Screenshot of generated HTML](dist/images/screenshot-team-profile-generator.html.png)
+## Demo (Generated HTML)
+<img src="dist/images/generatedHTML.png" alt="Screenshot of generated HTML" width="800px">
 
 ## Walkthrough
-[Video Walkthrough](https://drive.google.com/file/d/13dZiSVUEENgoHh99Hb8IEMCnsqOapcDU/view)
+[Video Walkthrough](https://drive.google.com/file/d/10qJ9pZtPmJBWpFdSVpwHAyd1Tmjz55kB/view)
 
 ## Contact
 
