@@ -1,4 +1,5 @@
 // Creating function for every new manager
+// Email adddress uses mailto links
 function makeManagerCard(manager) {
     return `
     <div class="card border-info mb-3" style="max-width: 18rem;">
@@ -8,8 +9,8 @@ function makeManagerCard(manager) {
         </div>
         <div class="card-body text-info">
           <h4 class="card-text"></h4>
-          <p class="card-text">ID: ${manager.id}</p>
-          <p class="card-text">Email: ${manager.email}</p>
+          <p class="card-text">ID: ${manager.id}</p> 
+          <p class="card-text">Email: <a href=mailto:${manager.email}>${manager.email}</a></p>
           <p class="card-text">Office Number: ${manager.officeNum}</p>
         </div>
       </div>
@@ -17,6 +18,7 @@ function makeManagerCard(manager) {
 };
 
 // Creating function for every new engineer
+//  GitHub username links to profiles
 function makeEngineerCard(engineer) {
     return `
     <div class="card border-info mb-3" style="max-width: 18rem;">
@@ -27,8 +29,8 @@ function makeEngineerCard(engineer) {
         <div class="card-body text-info">
           <h4 class="card-text"></h4>
           <p class="card-text">ID: ${engineer.id}</p>
-          <p class="card-text">Email: ${engineer.email}</p>
-          <p class="card-text">GitHub Username: ${engineer.githubUsername}</p>
+          <p class="card-text">Email: <a href=mailto:${engineer.email}>${engineer.email}</a></p>
+          <p class="card-text">GitHub Username: <a href=https://github.com/${engineer.githubUsername}>${engineer.githubUsername}</a></p>
         </div>
       </div>
     `
@@ -45,7 +47,7 @@ function makeInternCard(intern) {
         <div class="card-body text-info">
           <h4 class="card-text"></h4>
           <p class="card-text">ID: ${intern.id}</p>
-          <p class="card-text">Email: ${intern.email}</p>
+          <p class="card-text">Email: <a href=mailto:${intern.email}>${intern.email}</a></p>
           <p class="card-text">School Name: ${intern.schoolName}</p>
         </div>
       </div>

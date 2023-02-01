@@ -4,7 +4,8 @@
   "description": "## Your Task",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose tests/*"
+    "test": "jest --verbose tests/*",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

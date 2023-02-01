@@ -1,4 +1,6 @@
 # Team Profile Generator
+![ICS](https://img.shields.io/badge/license-ICS-orange)
+
 
 ## Description
 
@@ -13,11 +15,15 @@ What was your motivation?
   ```
   is also used to create a package.json
 
+
+## License
+Read more about the license here: [ICS](https://choosealicense.com/licenses/isc/)
+
 ## Tests
 
 To test the application, run this code in an intergrated terminal!
 ```
-node index.js
+npm start
 ```
 
 ## Usage
@@ -30,3 +36,10 @@ Once you run the test command in an intergrated terminal, you'll see this prompt
 
 ## Walkthrough
 [Video Walkthrough](https://drive.google.com/file/d/13dZiSVUEENgoHh99Hb8IEMCnsqOapcDU/view)
+
+## Contact
+
+### Questions? Reach me here:  
+Github: Amandagl1  
+Email: leeandama87@gmail.com
+
