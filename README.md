@@ -21,13 +21,13 @@ Read more about the license here: [ICS](https://choosealicense.com/licenses/isc/
 
 ## Tests
 
-To test the application, run this code in an intergrated terminal!
+To test the application, run this code in an intergrated terminal:
 ```
 npm start
 ```
 
 ## Usage
-Once you run the test command in an intergrated terminal, you'll see this prompt!  
+Once you run the test command in an intergrated terminal, you'll be given a prompt:  
 ![Usage of application](dist/images/usage.png)
 
 
